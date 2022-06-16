@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+//sette opp MVC
+//lage en counter - begynne på 0 - vise på nettsiden
+//lage en knapp somm øker og en som minuser - bruke én funksjon til begge knappene
+
+
+//model
+var number = 0;
+
+
+
+//view
+updateView();
+
+function updateView() {
+    document.getElementById('app').innerHTML = `
+    <h1>
+       ${number}     
+    </h1>
+    <button onclick="addOrRemove('plus')">+</button>
+    <button onclick="addOrRemove('minus')">-</button>
+    `;
+}
+//parameter er så mye mer enn this <33
+
+
+
+
+//controllers
+function addOrRemove(plusOrMinus){
+    if(plusOrMinus == 'plus'){
+        number++;
+    }
+    else if(plusOrMinus == 'minus'){
+        number--;
+    }
+    updateView();
+}
+
+
+    </script>  
+    
+</body>
+</html>

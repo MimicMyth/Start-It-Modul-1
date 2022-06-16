@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        h3 {
+            color: black;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        div.page {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 55px 10fr 30px;
+            grid-template-areas: 'header header'
+                'menu mainContent'
+                'footer footer';
+        }
+
+        div.header {
+            background-color: rgb(92, 204, 216);
+            grid-area: header;
+            color: white;
+            font-family: "helvetica";
+            line-height: 55px;
+
+        }
+
+        div.menu {
+            grid-area: menu;
+            margin-left: 20px;
+            color: red;
+        }
+
+        div.mainContent {
+            grid-area: mainContent;
+            flex-wrap: wrap;
+
+        }
+
+        div.footer {
+            background-color: grey;
+            grid-area: footer;
+            color: white;
+            text-align: right;
+            padding-top: 10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            div.page {
+                grid-template-columns: 1fr;
+                grid-template-rows: 55px 1fr 4fr 20px;
+                grid-template-areas:
+                    'header'
+                    'menu'
+                    'mainContent'
+                    'footer';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>My Website</h1>
+        </div>
+        <div class="menu">
+            <h3>Navigation</h3>
+            <p>
+                <b>Home</b> <br /> About <br /> Contact
+            </p>
+
+
+
+
+        </div>
+        <div class="mainContent">
+            <h2>Home Page</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Odio eu feugiat pretium nibh ipsum consequat nisl. Risus nec feugiat in fermentum
+                posuere urna. Adipiscing tristique risus nec feugiat in. Nulla posuere sollicitudin aliquam ultrices
+                sagittis. Eget est lorem ipsum dolor sit amet. Tincidunt id aliquet risus feugiat. Pulvinar elementum
+                integer enim neque volutpat ac tincidunt vitae. Scelerisque eu ultrices vitae auctor. Urna porttitor
+                rhoncus dolor purus non enim praesent. Pellentesque massa placerat duis ultricies lacus. Eu mi bibendum
+                neque egestas congue quisque egestas diam. Ut venenatis tellus in metus. Sit amet risus nullam eget
+                felis eget nunc lobortis mattis. <br/>
+            </p>
+
+
+                Lacus laoreet non curabitur gravida arcu ac. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar
+                sapien. Sit amet porttitor eget dolor. Fermentum odio eu feugiat pretium nibh ipsum consequat. Netus et
+                malesuada fames ac turpis egestas integer eget. Tristique senectus et netus et. Viverra aliquet eget sit
+                amet tellus cras adipiscing enim. Tincidunt ornare massa eget egestas purus viverra accumsan in nisl.
+                Diam vel quam elementum pulvinar etiam non quam lacus suspendisse. Dolor sed viverra ipsum nunc aliquet.
+                Viverra vitae congue eu consequat ac felis. Nibh sit amet commodo nulla facilisi nullam. Amet nisl
+                suscipit adipiscing bibendum est ultricies integer quis. Amet consectetur adipiscing elit ut aliquam
+                purus sit. Eu feugiat pretium nibh ipsum consequat. Tempor id eu nisl nunc. Odio eu feugiat pretium nibh
+                ipsum consequat nisl vel. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit. Leo
+                integer malesuada nunc vel risus. Molestie at elementum eu facilisis sed odio morbi.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Odio eu feugiat pretium nibh ipsum consequat nisl. Risus nec feugiat in fermentum
+                posuere urna. Adipiscing tristique risus nec feugiat in. Nulla posuere sollicitudin aliquam ultrices
+                sagittis. Eget est lorem ipsum dolor sit amet. Tincidunt id aliquet risus feugiat. Pulvinar elementum
+                integer enim neque volutpat ac tincidunt vitae. Scelerisque eu ultrices vitae auctor. Urna porttitor
+                rhoncus dolor purus non enim praesent. Pellentesque massa placerat duis ultricies lacus. Eu mi bibendum
+                neque egestas congue quisque egestas diam. Ut venenatis tellus in metus. Sit amet risus nullam eget
+                felis eget nunc lobortis mattis. <br/>
+            </p>
+            
+
+                Lacus laoreet non curabitur gravida arcu ac. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar
+                sapien. Sit amet porttitor eget dolor. Fermentum odio eu feugiat pretium nibh ipsum consequat. Netus et
+                malesuada fames ac turpis egestas integer eget. Tristique senectus et netus et. Viverra aliquet eget sit
+                amet tellus cras adipiscing enim. Tincidunt ornare massa eget egestas purus viverra accumsan in nisl.
+                Diam vel quam elementum pulvinar etiam non quam lacus suspendisse. Dolor sed viverra ipsum nunc aliquet.
+                Viverra vitae congue eu consequat ac felis. Nibh sit amet commodo nulla facilisi nullam. Amet nisl
+                suscipit adipiscing bibendum est ultricies integer quis. Amet consectetur adipiscing elit ut aliquam
+                purus sit. Eu feugiat pretium nibh ipsum consequat. Tempor id eu nisl nunc. Odio eu feugiat pretium nibh
+                ipsum consequat nisl vel. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor elit. Leo
+                integer malesuada nunc vel risus. Molestie at elementum eu facilisis sed odio morbi.
+            </p>
+
+
+        </div>
+        <div class="footer">Copyright©2014 Jake Wright.</div>
+    </div>
+</body>
+
+</html>

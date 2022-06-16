@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Ferdighet 7 - Oppgave. </p>
+    <input id="tallA" type="range" min="1" max="1000" step="1" oninput="calculate()"/>
+    <input id="tallB" type="range" min="1" max="1000" step="1" oninput="calculate()"/>
+    <div id="resultat"></div>
+    <div id="resultatHtml" style="font-family: monospace"></div>
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var resultatHtmlDiv = document.getElementById('resultatHtml');
+        var tallAInput = document.getElementById('tallA');
+        var tallBInput = document.getElementById('tallB');
+
+        calculate();
+
+        function calculate() {
+            var tallA = parseInt(tallAInput.value);
+            var tallB = parseInt(tallBInput.value);
+            var sum = tallA + tallB;
+            var sum = 2*tallA + 2*tallB;
+            var differense = tallA - tallB;
+            var produkt = tallA * tallB;
+            var kvotient = tallA / tallB;
+            resultatDiv.innerHTML = '<div style="' +
+                'border: ' + ' 3px' + ' solid' + ' black;'
+                + 'width: ' + tallAInput.value + 'px;'
+                + 'height: ' + tallBInput.value + 'px;'
+                + '">' + '</div>';
+                resultatHtmlDiv.innerText = ' Area ' + ' = ' + tallA + 'px' + ' * ' + tallB + 'px ' + ' = ' + produkt + 'px; ' + 
+                ' Circumference ' + ' = ' +
+                2*tallA + 'px' + ' + ' + 2*tallB + 'px' + ' = ' + sum + 'px;';
+        }
+    </script>
+</body>
+</html>

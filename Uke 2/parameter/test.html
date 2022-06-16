@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="showInfo('onload')">
+
+    <div id="app"></div>
+
+    <script>
+        // model
+        var info = '';
+        let onAll = '';
+
+
+
+
+        // view
+        updateView();
+
+        function updateView() {
+            document.getElementById('app').innerHTML = `
+            <p>
+                Ferdighet 2a - Alternative eventhandlere: onchange osv.
+            </p>
+
+            <input
+                type="text" 
+                onchange="showInfo('onchange')" 
+                oninput="showInfo('oninput')" 
+            />
+
+            <h3 
+                onmouseover="showInfo('onmouseover')" 
+                onmouseout="showInfo('onmouseout')"
+            >
+                Test test test
+            </h3>
+
+            <h2>
+                ${info}
+            </h2>
+            
+            <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">
+                Mer informasjon her
+            </a>
+          `;
+        }
+        // controller
+        function showInfo(onAll) {
+            if (onAll == 'onload') {
+                info += `<li>${onAll}</li>`;
+            }
+            else if (onAll == 'onchange') {
+                info += `<li>${onAll}</li>`;
+            }
+            else if (onAll == 'oninput') {
+                info += `<li>${onAll}</li>`;
+            }
+            else if (onAll == 'onmouseover') {
+                info += `<li>${onAll}</li>`;
+            }
+            else if (onAll == 'onmouseout') {
+                info += `<li>${onAll}</li>`;
+            }
+            updateView();
+
+        }
+
+    </script>
+</body>
+
+</html>

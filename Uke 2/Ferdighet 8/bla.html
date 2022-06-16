@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .stiling {
+            background-color: blueviolet;
+        }
+
+        .border {
+            border: 2px solid black;
+        }
+
+        .color {
+            color: aqua;
+        }
+
+        .font {
+            font-weight: bolder;
+            font-size: larger;
+        }
+
+        .padding {
+            padding: 10px;
+        }
+
+        div.selected::before {
+            content: "🡆";
+        }
+
+        div.selected::after {
+            content: "🡄";
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ferdighet 8</h1>
+    <input id="chk" type="checkbox" onchange="toggleStyle()" />
+    <input id="chkB" type="checkbox" onchange="toggleBorder()" />
+    <input id="chkC" type="checkbox" onchange="toggleColor()" />
+    <input id="chkD" type="checkbox" onchange="toggleFont()" />
+    <input id="chkE" type="checkbox" onchange="togglePadding()" />
+    <div> <br/>
+        <div id="bla" style="width: 100px; text-align: center; cursor: pointer;" onclick="selectA(this)">Bla bla bla</div> <br/>
+        <div id="bla2" style="width: 100px; text-align: center; cursor: pointer;" onclick="selectB(this)">Bla bla bla</div> <br/>
+        <div id="bla3" style="width: 100px; text-align: center; cursor: pointer;" onclick="selectC(this)">Bla bla bla</div> <br/>
+        <div id="bla4" style="width: 100px; text-align: center; cursor: pointer;" onclick="selectD(this)">Bla bla bla</div> <br/>
+        <div id="bla5" style="width: 100px; text-align: center; cursor: pointer;" onclick="selectE(this)">Bla bla bla</div> <br/>
+    </div>
+    <script>
+        var blaSelected = document.getElementById('bla')
+        var blaSelected2 = document.getElementById('bla2')
+        var blaSelected3 = document.getElementById('bla3')
+        var blaSelected4 = document.getElementById('bla4')
+        var blaSelected5 = document.getElementById('bla5')
+
+        function toggleStyle() {
+            var isChecked = document.getElementById('chk').checked;
+            if (blaSelected.classList.contains('selected')){
+                blaSelected.classList.toggle('stiling', isChecked);
+            }
+            else if (blaSelected2.classList.contains('selected')){
+                blaSelected2.classList.toggle('stiling', isChecked);
+            }
+            else if (blaSelected3.classList.contains('selected')){
+                blaSelected3.classList.toggle('stiling', isChecked);
+            }
+            else if (blaSelected4.classList.contains('selected')){
+                blaSelected4.classList.toggle('stiling', isChecked);
+            }
+            else if (blaSelected5.classList.contains('selected')){
+                blaSelected5.classList.toggle('stiling', isChecked);
+            }
+        }
+        function toggleBorder() {
+            var isChecked = document.getElementById('chkB').checked;
+            if (blaSelected.classList.contains('selected')){
+                blaSelected.classList.toggle('border', isChecked);
+            }
+            else if (blaSelected2.classList.contains('selected')){
+                blaSelected2.classList.toggle('border', isChecked);
+            }
+            else if (blaSelected3.classList.contains('selected')){
+                blaSelected3.classList.toggle('border', isChecked);
+            }
+            else if (blaSelected4.classList.contains('selected')){
+                blaSelected4.classList.toggle('border', isChecked);
+            }
+            else if (blaSelected5.classList.contains('selected')){
+                blaSelected5.classList.toggle('border', isChecked);
+            }
+        }
+        function toggleColor() {
+            var isChecked = document.getElementById('chkC').checked;
+            if (blaSelected.classList.contains('selected')){
+                blaSelected.classList.toggle('color', isChecked);
+            }
+            else if (blaSelected2.classList.contains('selected')){
+                blaSelected2.classList.toggle('color', isChecked);
+            }
+            else if (blaSelected3.classList.contains('selected')){
+                blaSelected3.classList.toggle('color', isChecked);
+            }
+            else if (blaSelected4.classList.contains('selected')){
+                blaSelected4.classList.toggle('color', isChecked);
+            }
+            else if (blaSelected5.classList.contains('selected')){
+                blaSelected5.classList.toggle('color', isChecked);
+            }
+        }
+        function toggleFont() {
+            var isChecked = document.getElementById('chkD').checked;
+            if (blaSelected.classList.contains('selected')){
+                blaSelected.classList.toggle('font', isChecked);
+            }
+            else if (blaSelected2.classList.contains('selected')){
+                blaSelected2.classList.toggle('font', isChecked);
+            }
+            else if (blaSelected3.classList.contains('selected')){
+                blaSelected3.classList.toggle('font', isChecked);
+            }
+            else if (blaSelected4.classList.contains('selected')){
+                blaSelected4.classList.toggle('font', isChecked);
+            }
+            else if (blaSelected5.classList.contains('selected')){
+                blaSelected5.classList.toggle('font', isChecked);
+            }
+        }
+        function togglePadding() {
+            var isChecked = document.getElementById('chkE').checked;
+            if (blaSelected.classList.contains('selected')){
+                blaSelected.classList.toggle('padding', isChecked);
+            }
+            else if (blaSelected2.classList.contains('selected')){
+                blaSelected2.classList.toggle('padding', isChecked);
+            }
+            else if (blaSelected3.classList.contains('selected')){
+                blaSelected3.classList.toggle('padding', isChecked);
+            }
+            else if (blaSelected4.classList.contains('selected')){
+                blaSelected4.classList.toggle('padding', isChecked);
+            }
+            else if (blaSelected5.classList.contains('selected')){
+                blaSelected5.classList.toggle('padding', isChecked);
+            }
+        }
+        function selectA(clickedElement) {
+            clickedElement.classList.add('selected')
+            blaSelected2.classList.remove('selected')
+            blaSelected3.classList.remove('selected')
+            blaSelected4.classList.remove('selected')
+            blaSelected5.classList.remove('selected')
+            
+        }
+        function selectB(clickedElement) {
+            clickedElement.classList.add('selected')
+            blaSelected.classList.remove('selected')
+            blaSelected3.classList.remove('selected')
+            blaSelected4.classList.remove('selected')
+            blaSelected5.classList.remove('selected')
+
+        }
+        function selectC(clickedElement) {
+            clickedElement.classList.add('selected')
+            blaSelected.classList.remove('selected')
+            blaSelected2.classList.remove('selected')
+            blaSelected4.classList.remove('selected')
+            blaSelected5.classList.remove('selected')
+            
+        }
+        function selectD(clickedElement) {
+            clickedElement.classList.add('selected')
+            blaSelected.classList.remove('selected')
+            blaSelected2.classList.remove('selected')
+            blaSelected3.classList.remove('selected')
+            blaSelected5.classList.remove('selected')
+
+        }
+        function selectE(clickedElement) {
+            clickedElement.classList.add('selected')
+            blaSelected.classList.remove('selected')
+            blaSelected2.classList.remove('selected')
+            blaSelected3.classList.remove('selected')
+            blaSelected4.classList.remove('selected')
+
+        }
+    </script>
+
+</body>
+
+</html>

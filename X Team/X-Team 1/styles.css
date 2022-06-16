@@ -1,0 +1,12 @@
+div {
+    color: black;
+    background-color: aqua;
+    width: 120px;
+    height: 90px;
+    float: left;
+    
+    
+}
+div.firstInLine {
+    clear: left;
+}

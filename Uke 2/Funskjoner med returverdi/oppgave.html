@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tilfeldigTall(minimum, maksimum) {
+            return minimum + Math.floor(Math.random() * (maksimum - minimum + 1));
+        }
+        
+        function tilfeldigBokstav() {
+            var tall = tilfeldigTall(0, 28);
+            if(tall == 28) return 'å';
+            if(tall == 27) return 'ø';
+            if(tall == 26) return 'æ';
+            const charCodeA = 'a'.charCodeAt(0);
+            return String.fromCharCode(tall - 0 + charCodeA);
+        
+        }
+
+        function randomWORD(){
+            return  tilfeldigBokstav() +
+            tilfeldigBokstav() +
+            tilfeldigBokstav();
+        }
+
+       
+    </script>
+</body>
+</html>

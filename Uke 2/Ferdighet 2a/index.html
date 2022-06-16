@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="testOnLoad()">
+    <p>Ferdighet 2a - Alternative eventhandlere: onchange osv.</p>
+    <input type="text" onkeydown="testOnKeyDown()" onchange="testOnChange()" oninput="testOnInput()" />
+    <h3 onmouseover="testOnMouseOver()" onmouseout="testOnMouseOut()">Test test test</h3>
+    <h2 id="info"></h2>
+    <h3 oncontextmenu="testOnContextMenu()" ondblclick="testOnDblclick()">Dobbel Klikk og Left Klikk</h3>
+
+    <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">Mer informasjon her</a>
+    <script>
+        function testOnLoad() {
+            console.log('Du Loada nettsiden');
+        }
+
+        function testOnChange() {
+            console.log('Du skrev ferdig i tekstfeltet');
+        }
+
+        function testOnInput() {
+            console.log('Du skrev i tekstfeltet');
+        }
+
+        function testOnMouseOver() {
+            console.log('Du dro over musa');
+        }
+
+        function testOnMouseOut() {
+           console.log('Du dro vekk musa');
+        }
+        function testOnContextMenu() {
+           console.log('Du Left klikket');
+        }
+        function testOnDblclick() {
+            console.log('Du Dobbel Klikket');
+        }
+        function testOnKeyDown() {
+            console.log('Du presset en tast på tastaturet')
+        }
+    </script>
+</body>
+</html>

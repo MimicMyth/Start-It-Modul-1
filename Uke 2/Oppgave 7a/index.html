@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Ferdighet 7a - Oppgave.</p>
+    <div id="resultat"></div> <br/>
+    <div id="resultatHtml" style="font-weight: bold;"></div>
+    
+
+    <script>
+        var resultatDiv = document.getElementById('resultat');
+        var resultatHtmlDiv = document.getElementById('resultatHtml');
+        
+        calculate();
+
+        function calculate() {
+            var tallA = 50 + Math.floor(Math.random() * 400);
+            var tallB = 50 + Math.floor(Math.random() * 400);
+            var border = 1 + Math.floor(Math.random() * 29);
+            resultatDiv.innerHTML = '<div style="' +
+                'border: ' + border + 'px' + ' solid' + ' black;'
+                + 'width: ' + tallA + 'px;'
+                + 'height: ' + tallB + 'px;'
+                + '">' + '</div>';
+                resultatHtmlDiv.innerText = 'Width: ' + tallA + 'px; ' + '\n'
+                 + ' Height: ' + tallB + 'px; ' + '\n'
+                  + ' Border-size: ' + border + 'px;'
+        }
+    </script>
+</body>
+</html>

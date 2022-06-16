@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave</title>
+    <style>
+
+        body {
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+            width: fit-content;
+        }
+
+        .container {
+            float: left;
+            width: 260px;
+            height: 260px;
+            background-color: rgb(28, 28, 28);
+            justify-content: center;
+            display: block;
+            align-items: center;
+            
+
+
+        }
+
+        div {
+            color: white;
+            background-color: rgb(125, 125, 125);
+            padding: 10px;
+            margin: 5px;
+            border: solid rgb(75, 75, 75) 3px;
+            width: 50px;
+            height: 50px;
+            float: left;
+            
+
+
+        }
+
+        div.firstInLine {
+            clear: left;
+        }
+
+        .block {
+            cursor: pointer;
+            text-align: center;
+            font-size: xx-large;
+            font-family: 'helvetica';
+            line-height: 50px;
+            font-weight: bold;
+            
+
+        }
+        h3 {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <div id="r1k1" class="block" onclick="trykk1()">1</div>
+        <div id="r1k2" class="block" onclick="trykk2()">2</div>
+        <div id="r1k3" class="block" onclick="trykk3()">3</div>
+
+        <div id="r2k1" class="block" class="firstInLine" onclick="trykk4()">4</div>
+        <div id="r2k2" class="block" onclick="trykk5()">5</div>
+        <div id="r2k3" class="block" onclick="trykk6()">6</div>
+
+        <div id="r3k1" class="block" class="firstInLine" onclick="trykk7()">7</div>
+        <div id="r3k2" class="block" onclick="trykk8()">8</div>
+        <div id="r3k3" class="block" onclick="trykk9()">9</div>
+
+    </div>
+    <h3 id="info"></h3>
+
+    <script>
+        var tekstA = '';
+        console.log(tekstA);
+
+        function trykk1() {
+            tekstA += '1-';
+
+            document.getElementById('info').innerHTML =
+            tekstA;
+
+        }
+        function trykk2() {
+            tekstA += '2-';
+
+            document.getElementById('info').innerHTML =
+            tekstA;
+
+        }
+        function trykk3() {
+            tekstA += '3-';
+
+            document.getElementById('info').innerHTML =
+            tekstA;
+
+        }
+        function trykk4() {
+            tekstA += '4-';
+
+            document.getElementById('info').innerHTML =
+            tekstA;
+
+        }
+        function trykk5() {
+            tekstA += '5-';
+
+            document.getElementById('info').innerHTML =
+            tekstA;
+
+        }
+        function trykk6() {
+            tekstA += '6-';
+
+            document.getElementById('info').innerHTML =
+            tekstA;
+
+        }
+        function trykk7() {
+            tekstA += '7-';
+
+            document.getElementById('info').innerHTML =
+            tekstA;
+
+        }
+        function trykk8() {
+            tekstA += '8-';
+
+            document.getElementById('info').innerHTML =
+            tekstA;
+
+        }
+        function trykk9() {
+            tekstA += '9-';
+
+            document.getElementById('info').innerHTML =
+            tekstA;
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        //model
+        var todolist = '';
+        var inputValue = '';
+
+        //view
+        updateView();
+        function updateView() {
+            document.getElementById('app').innerHTML = /*HTML*/ `
+            <h2>To Do LIST:</h2>
+
+            <input 
+                type="text"
+                oninput="inputValue = this.value"
+                value="${inputValue}"
+            /> 
+
+            <button onclick="registrer()">Registrer</button>
+            <button onclick="">Blank All</button>
+            <div>${todolist}</div>
+            `;
+        }
+
+        //controller
+        function registrer() {
+            const id = Math.floor(Math.random() * 100000)
+            let value = '<li>' + inputValue + '<button onclick="fjernListe()">X</button></li>';
+            if (inputValue != '') {
+                todolist += value;
+            } else {
+                return todolist = '';
+            }
+            inputValue = '';
+            updateView();
+        }
+        function fjernListe() {
+            let value = ;
+            todolist = value;
+            value = '';
+
+            updateView();
+        }
+
+    </script>    
+</body>
+</html>

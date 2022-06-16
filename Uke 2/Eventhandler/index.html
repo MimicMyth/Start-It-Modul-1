@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        // model
+        var svar = svarTxt;
+        var feil = svarTxt2 || svarTxt3;
+
+
+        // view
+        updateView();
+        function updateView() {
+            var svarTxt = '1. Sverige';
+            var svarTxt2 = '2. Finnland';
+            var svarTxt3 = '3. Japan';
+            document.getElementById('app').innerHTML = `
+                <h1>Quiz</h1>
+                <p><b>Hvilke land innholder flest øyer?</b></p>
+                <div onclick=" ${svarTxt || 'Riktig!'}">${svarTxt}</div>
+                <div onclick="bytt(${feil})">${svarTxt2}</div>
+                <div onclick="bytt()">${svarTxt3}</div> <br/>
+                <div>
+                <button type="reset" value="Reset" onclick="reload()">Reset</button>
+                </div>
+                `;
+            }
+        function bytt() {
+            if (svar= sverige){
+                svar.innerHTML =/*HTML*/ `
+                <div style='color: green;'>Riktig!</div>
+                `;
+                alert('Sverige er på førsteplass med ca 220.000 øyer!')
+                style;
+            }
+            else {
+                svar.innerHTML =/*HTML*/ `
+                <div style='color: red;'>Feil</div>
+                `;
+
+                }
+            }
+        
+    </script>
+</body>
+</html>
